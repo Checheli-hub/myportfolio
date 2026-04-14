@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import mylogo from "../images/mylogo.jpg";
+import mylogo from "../Images/mylogo.jpg";
 import { BsDot, BsFileEarmark } from "react-icons/bs";
 import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 import { FiMail, FiArrowDown } from "react-icons/fi";
