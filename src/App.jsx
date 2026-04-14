@@ -5,7 +5,7 @@ import Contacts from "./components/Contact";
 import Projects from "./components/Projects";
 import HomePage from "./components/HomePage";
 import Nav from "./components/Nav";
-import Service from "./components/service";
+import Service from "./components/Service";
 import { useState } from "react";
 import WhyTrustCard from "./components/whyTrustCard";
 import Footer from "./components/footer";

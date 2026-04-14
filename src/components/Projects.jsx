@@ -54,9 +54,8 @@ function Projects() {
           </div>
           <div className="row g-4 px-2 px-md-4">
             {displayedProjects.map((items) => (
-              <div className="col-12 col-md-6 col-lg-4 d-flex">
+              <div key={items.id} className="col-12 col-md-6 col-lg-4 d-flex">
                 <ProjectDashBoardCard
-                  key={items.id}
                   title={items.title}
                   category={items.category}
                   image={items.image}
