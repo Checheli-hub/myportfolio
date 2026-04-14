@@ -28,22 +28,35 @@ function HomePage({ handleScroll }) {
   return (
     <section>
       <Helmet>
-        <title>Cheche Tech | UI/UX Designer & Front-End Developer</title>
+        <title>
+          Frontend Developer in Lagos | React & UI/UX Designer - Cheche Tech
+        </title>
         <meta
           name="description"
-          content="The intersection of design and code. Cheche Tech creates high-fidelity UI/UX designs and transforms them into scalable, performant React applications."
+          content="Frontend Developer in Lagos, Nigeria specializing in React, UI/UX design, and responsive web applications. View my portfolio and projects."
         />
-        <meta property="og:title" content="Cheche Tech Portfolio" />
+
+        <meta
+          property="og:title"
+          content="Frontend Developer in Lagos | React & UI/UX Designer - Cheche Tech"
+        />
+
         <meta
           property="og:description"
-          content="UI/UX Designer & Front-End Developer based in Nigeria."
+          content="Frontend Developer in Lagos, Nigeria specializing in React, UI/UX design, and responsive web applications."
         />
+        <meta
+          property="og:image"
+          content="https://abdulkudus-portfolio.netlify.app/preview.png"
+        />
+        <meta property="og:type" content="website" />
+        <meta name="robots" content="index, follow" />
       </Helmet>
       <div className="logo-wrapper" id="HomePage">
         <div className="logo-con">
           <img
             src={mylogo}
-            alt="Cheche Tech - Professional UI/UX Designer and Frontend Developer"
+            alt="Frontend Developer Lagos - Cheche Tech UI/UX Portfolio"
           />
         </div>
 
