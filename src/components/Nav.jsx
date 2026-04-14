@@ -1,40 +1,51 @@
 import { GiHamburgerMenu, GiHexagonalNut } from "react-icons/gi";
 import { IoClose } from "react-icons/io5";
+import { BsDot } from "react-icons/bs";
 import "../App.css";
 
 function Nav({ handleScroll, menuOpen, setMenuOpen }) {
   const links = [
-    { to: "#HomePage", label: "HomePage" },
+    { to: "#HomePage", label: "Home" },
     { to: "#about", label: "About" },
-    { to: "#contacts", label: "Contacts" },
-    { to: "#projects", label: "Projects" },
-    { to: "#skills", label: "Skills" },
     { to: "#service", label: "Service" },
+    { to: "#projects", label: "Projects" },
+    { to: "#whyTrust", label: "Why Choose Me" },
+    { to: "#contacts", label: "Contacts" },
   ];
 
   return (
-    <div className="nav-con">
+    <nav className="nav-con" aria-label="Main Navigation">
       <div className="icon-box">
         <div className="logo-group">
-          <div className="bolt-box">
+          <div className="bolt-box" aria-hidden="true">
             <GiHexagonalNut size={20} color="white" />
           </div>
           <div className="text-con">
-            <p>
-              CHECHE TECH <br /> <span>WEB. MOBILE. SYSTEM</span>
-            </p>
+            <h1>
+              CHECHE TECH <br />
+              <span>
+                Frontend <BsDot size={20} /> UI/UX <BsDot size={20} /> Web Apps
+              </span>
+            </h1>
           </div>
         </div>
-        <div className="burger-box" onClick={() => setMenuOpen(!menuOpen)}>
+        <button
+          className="burger-box"
+          onClick={() => setMenuOpen(!menuOpen)}
+          aria-expanded={menuOpen}
+          aria-label="Toggle navigation Menu"
+          style={{
+            outline: "none",
+            border: "none",
+          }}
+        >
           {menuOpen ? (
             <IoClose size={20} color="white" />
           ) : (
             <GiHamburgerMenu size={20} color="white" />
           )}
-        </div>
-      </div>
-      {menuOpen && (
-        <ul className="mobile-menu">
+        </button>
+        <ul className={`mobile-menu ${menuOpen ? "open" : ""}`}>
           {links.map((link, index) => (
             <li key={index}>
               <a
@@ -47,8 +58,8 @@ function Nav({ handleScroll, menuOpen, setMenuOpen }) {
             </li>
           ))}
         </ul>
-      )}
-    </div>
+      </div>
+    </nav>
   );
 }
 

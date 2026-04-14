@@ -8,7 +8,7 @@ export const ServiceData = [
       "Responsive Web Applications",
       "Component-Based UI Development",
       "React Development",
-      "Basic Api Integration",
+      "Basic API Integration",
     ],
     icon: "bi-palette",
     color: "#00ff88",

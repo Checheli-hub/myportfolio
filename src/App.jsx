@@ -7,6 +7,9 @@ import HomePage from "./components/HomePage";
 import Nav from "./components/Nav";
 import Service from "./components/service";
 import { useState } from "react";
+import WhyTrustCard from "./components/whyTrustCard";
+import Footer from "./components/footer";
+import { HelmetProvider } from "react-helmet-async";
 import "./App.css";
 
 function App() {
@@ -16,33 +19,37 @@ function App() {
     e.preventDefault();
     const element = document.querySelector(targetId);
     if (element) {
-      element.scrollIntoView({ behavoir: "smooth" });
+      element.scrollIntoView({ behavior: "smooth" });
     }
     setMenuOpen(false);
   };
 
   return (
-    <div className="main-background">
-      <Nav
-        handleScroll={handleScroll}
-        menuOpen={menuOpen}
-        setMenuOpen={setMenuOpen}
-      />
-      <Routes>
-        <Route
-          path="/"
-          element={
-            <>
-              <HomePage handleScroll={handleScroll} />
-              <About />
-              <Service />
-              <Projects />
-              <Contacts />
-            </>
-          }
+    <HelmetProvider>
+      <main className="main-background">
+        <Nav
+          handleScroll={handleScroll}
+          menuOpen={menuOpen}
+          setMenuOpen={setMenuOpen}
         />
-      </Routes>
-    </div>
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <>
+                <HomePage handleScroll={handleScroll} />
+                <About />
+                <Service />
+                <Projects />
+                <WhyTrustCard />
+                <Contacts />
+                <Footer />
+              </>
+            }
+          />
+        </Routes>
+      </main>
+    </HelmetProvider>
   );
 }
 
